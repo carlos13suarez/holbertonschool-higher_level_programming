@@ -3,5 +3,8 @@
 
 def multiple_returns(sentence):
     length = len(sentence)
-    first = sentence[0:1]
+    if length > 0:
+        first = sentence[0:1]
+    else:
+        first = None
     return length, first
