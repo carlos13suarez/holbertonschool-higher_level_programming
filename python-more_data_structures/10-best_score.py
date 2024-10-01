@@ -2,7 +2,7 @@
 
 
 def best_score(a_dictionary):
-    if a_dictionary == None:
+    if bool(a_dictionary) == False:
         return None
     best = ""
     score = 0
