@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 def square_matrix_simple(matrix=[]):
     rows = len(matrix)
     columns = len(matrix[0])
