@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 This module defines the `add_integer` function, which adds two numbers.
 
