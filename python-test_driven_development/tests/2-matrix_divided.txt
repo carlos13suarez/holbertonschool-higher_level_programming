@@ -43,3 +43,7 @@ TypeError: div must be a number
 Traceback (most recent call last):
     ...
 ZeroDivisionError: division by zero
+
+>>> matrix = [[0, 0, 0], [0, 0, 0]]
+>>> matrix_divided(matrix, 3)
+[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
