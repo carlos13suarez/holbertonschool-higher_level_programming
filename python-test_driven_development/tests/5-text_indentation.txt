@@ -1,0 +1,41 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> text_indentation("Hello. How are you? I'm fine:")
+Hello.
+<BLANKLINE>
+How are you?
+<BLANKLINE>
+I'm fine:
+<BLANKLINE>
+
+>>> text_indentation("This is a test. This should be on a new line? And so should this:")
+This is a test.
+<BLANKLINE>
+This should be on a new line?
+<BLANKLINE>
+And so should this:
+<BLANKLINE>
+
+>>> text_indentation("No punctuation here")
+No punctuation here
+
+>>> text_indentation("Multiple punctuations!!! This should break at periods. Like this.")
+Multiple punctuations!!! This should break at periods.
+<BLANKLINE>
+Like this.
+<BLANKLINE>
+
+>>> text_indentation("Spaces after punctuation? Yes, it should handle that too. Like this:")
+Spaces after punctuation?
+<BLANKLINE>
+Yes, it should handle that too.
+<BLANKLINE>
+Like this:
+<BLANKLINE>
+
+>>> text_indentation("This sentence: has a colon.")
+This sentence:
+<BLANKLINE>
+has a colon.
+<BLANKLINE>
+>>> text_indentation("")
+
