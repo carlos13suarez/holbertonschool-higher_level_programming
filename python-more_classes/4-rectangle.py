@@ -72,6 +72,6 @@ class Rectangle:
         """Returns the string representation of the rectangle"""
         return (
             "Rectangle(" +
-            str(self.__width) + "," +
+            str(self.__width) + ", " +
             str(self.__height) + ")"
         )
