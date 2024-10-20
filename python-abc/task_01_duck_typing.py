@@ -26,7 +26,7 @@ class Shape(ABC):
 class Circle(Shape):
     """Circle class that inherits from Shape abstract class"""
 
-    def __init__(self, radius):
+    def __init__(self, radius=0):
         """Instantiation with radius
 
         Args:
@@ -46,7 +46,7 @@ class Circle(Shape):
 class Rectangle(Shape):
     """Rectangle class that inherits from Shape abstract class"""
 
-    def __init__(self, width, height):
+    def __init__(self, width=0, height=0):
         """Instantiation with width and height
 
         Args:
