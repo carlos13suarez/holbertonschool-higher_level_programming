@@ -30,7 +30,7 @@ class Circle(Shape):
 
     def area(self):
         """Returns the area of a circle"""
-        return pi * (self.radius * self.radius)
+        return pi * self.radius * self.radius
 
     def perimeter(self):
         """Returns the perimeter of a circle"""
@@ -61,3 +61,11 @@ def shape_info(shape):
     """
     print(f"Area: {shape.area()}")
     print(f"Perimeter: {shape.perimeter()}")
+
+
+# Testing
+circle = Circle(5)
+rectangle = Rectangle(3, 4)
+
+shape_info(circle)
+shape_info(rectangle)
