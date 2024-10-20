@@ -18,7 +18,7 @@ class BaseGeometry:
         Arguments:
             name (str): The name of the value
             value (int): The value to be validated
-        
+
         Raises:
             TypeError: If value is not an integer
             ValueError: If value is less than or equal to 0
