@@ -21,23 +21,23 @@ class Shape(ABC):
         """Perimeter abstract method that must be overridden"""
         pass
 
-    def integer_validator(self, value):
+    def integer_validator(self, name, value):
         """Validates value is a positive integer number"""
         if isinstance(value, bool):
-            raise TypeError(f"{value} must be an integer")
+            raise TypeError(f"{name} must be an integer")
 
         if not isinstance(value, int):
-            raise TypeError(f"{value} must be an integer")
+            raise TypeError(f"{name} must be an integer")
 
         if value <= 0:
-            raise ValueError(f"{value} must be greater than 0")
+            raise ValueError(f"{name} must be greater than 0")
 
 
 class Circle(Shape):
     """Circle class that inherits from Shape abstract class"""
     def __init__(self, radius):
         """Circle construct"""
-        self.integer_validator(radius)
+        self.integer_validator("radius", radius)
         self.radius = radius
 
     def area(self):
@@ -53,8 +53,8 @@ class Rectangle(Shape):
     """Rectangle class that inherits from Shape abstract class"""
     def __init__(self, width, height):
         """Rectancle construct"""
-        self.integer_validator(width)
-        self.integer_validator(height)
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
         self.width = width
         self.height = height
 
