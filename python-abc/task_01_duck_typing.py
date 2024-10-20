@@ -6,7 +6,7 @@ and its subclasses Circle and Rectangle
 
 
 from abc import ABC, abstractmethod
-from math import pi
+import math.pi
 
 
 class Shape(ABC):
@@ -36,11 +36,11 @@ class Circle(Shape):
 
     def area(self):
         """Returns the area of a circle"""
-        return pi * self.radius * self.radius
+        return math.pi * self.radius * self.radius
 
     def perimeter(self):
         """Returns the perimeter of a circle"""
-        return 2 * pi * self.radius
+        return 2 * math.pi * self.radius
 
 
 class Rectangle(Shape):
