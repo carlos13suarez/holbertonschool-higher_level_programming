@@ -11,6 +11,7 @@ from math import pi
 
 class Shape(ABC):
     """Shape abstract class"""
+
     @abstractmethod
     def area(self):
         """Area abstract method that must be overridden"""
@@ -24,6 +25,7 @@ class Shape(ABC):
 
 class Circle(Shape):
     """Circle class that inherits from Shape abstract class"""
+
     def __init__(self, radius):
         """Circle construct"""
         self.radius = radius
@@ -39,6 +41,7 @@ class Circle(Shape):
 
 class Rectangle(Shape):
     """Rectangle class that inherits from Shape abstract class"""
+
     def __init__(self, width, height):
         """Rectancle construct"""
         self.width = width
@@ -61,11 +64,3 @@ def shape_info(shape):
     """
     print(f"Area: {shape.area()}")
     print(f"Perimeter: {shape.perimeter()}")
-
-
-# Testing
-circle = Circle(5)
-rectangle = Rectangle(3, 4)
-
-shape_info(circle)
-shape_info(rectangle)
