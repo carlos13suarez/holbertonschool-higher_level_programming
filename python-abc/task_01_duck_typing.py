@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-This module contains the Shape abstract class and its subclasses Circle and Rectangle
+This module contains the Shape abstract class
+and its subclasses Circle and Rectangle
 """
 
 
@@ -12,19 +13,31 @@ class Shape(ABC):
     """Shape abstract class"""
     @abstractmethod
     def area(self):
-        """Area abstract method that must be overridden by its subclasses"""
+        """Area abstract method that must be overridden"""
         pass
 
     @abstractmethod
     def perimeter(self):
-        """Perimeter abstract method that must be overridden by its subclasses"""
+        """Perimeter abstract method that must be overridden"""
         pass
+
+    def integer_validator(self, value):
+        """Validates value is a positive integer number"""
+        if isinstance(value, bool):
+            raise TypeError(f"{value} must be an integer")
+
+        if not isinstance(value, int):
+            raise TypeError(f"{value} must be an integer")
+
+        if value <= 0:
+            raise ValueError(f"{value} must be greater than 0")
 
 
 class Circle(Shape):
     """Circle class that inherits from Shape abstract class"""
     def __init__(self, radius):
         """Circle construct"""
+        self.integer_validator(radius)
         self.radius = radius
 
     def area(self):
@@ -40,6 +53,8 @@ class Rectangle(Shape):
     """Rectangle class that inherits from Shape abstract class"""
     def __init__(self, width, height):
         """Rectancle construct"""
+        self.integer_validator(width)
+        self.integer_validator(height)
         self.width = width
         self.height = height
 
