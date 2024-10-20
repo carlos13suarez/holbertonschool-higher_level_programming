@@ -6,7 +6,7 @@ and its subclasses Circle and Rectangle
 
 
 from abc import ABC, abstractmethod
-import math.pi
+import math
 
 
 class Shape(ABC):
