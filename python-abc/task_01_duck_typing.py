@@ -30,7 +30,7 @@ class Circle(Shape):
 
     def area(self):
         """Returns the area of a circle"""
-        return 3.14 * (self.radius * self.radius)
+        return pi * (self.radius * self.radius)
 
     def perimeter(self):
         """Returns the perimeter of a circle"""
