@@ -6,7 +6,7 @@ and its subclasses Circle and Rectangle
 
 
 from abc import ABC, abstractmethod
-import math
+from math import pi
 
 
 class Shape(ABC):
@@ -32,15 +32,15 @@ class Circle(Shape):
         Args:
             radius (int): The radius of the circle
         """
-        self.radius = radius
+        self._radius = radius
 
     def area(self):
         """Returns the area of a circle"""
-        return math.pi * self.radius * self.radius
+        return pi * self._radius * self._radius
 
     def perimeter(self):
         """Returns the perimeter of a circle"""
-        return 2 * math.pi * self.radius
+        return 2 * pi * self._radius
 
 
 class Rectangle(Shape):
@@ -53,16 +53,16 @@ class Rectangle(Shape):
             width (int): The width of the rectangle
             height (int): The height of the rectangle
         """
-        self.width = width
-        self.height = height
+        self._width = width
+        self._height = height
 
     def area(self):
         """Returns the area of a rectangle"""
-        return self.width * self.height
+        return self._width * self._height
 
     def perimeter(self):
         """Returns the perimeter of a rectangle"""
-        return 2 * (self.width + self.height)
+        return 2 * (self._width + self._height)
 
 
 def shape_info(shape):
