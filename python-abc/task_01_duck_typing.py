@@ -32,9 +32,6 @@ class Circle(Shape):
         Args:
             radius (int): The radius of the circle
         """
-        if isinstance(radius, bool):
-            raise TypeError
-
         if not isinstance(radius, int):
             raise TypeError
 
@@ -61,17 +58,11 @@ class Rectangle(Shape):
             width (int): The width of the rectangle
             height (int): The height of the rectangle
         """
-        if isinstance(width, bool):
-            raise TypeError
-
         if not isinstance(width, int):
             raise TypeError
 
         if width <= 0:
             raise ValueError
-
-        if isinstance(height, bool):
-            raise TypeError
 
         if not isinstance(height, int):
             raise TypeError
