@@ -26,13 +26,19 @@ class Shape(ABC):
 class Circle(Shape):
     """Circle class that inherits from Shape abstract class"""
 
-    def __init__(self, radius=0):
+    def __init__(self, radius):
         """Instantiation with radius
 
         Args:
             radius (int): The radius of the circle
         """
-        if radius < 0:
+        if isinstance(radius, bool):
+            raise TypeError
+
+        if not isinstance(radius, int):
+            raise TypeError
+
+        if radius <= 0:
             raise ValueError
         self._radius = radius
 
@@ -48,13 +54,30 @@ class Circle(Shape):
 class Rectangle(Shape):
     """Rectangle class that inherits from Shape abstract class"""
 
-    def __init__(self, width=0, height=0):
+    def __init__(self, width, height):
         """Instantiation with width and height
 
         Args:
             width (int): The width of the rectangle
             height (int): The height of the rectangle
         """
+        if isinstance(width, bool):
+            raise TypeError
+
+        if not isinstance(width, int):
+            raise TypeError
+
+        if width <= 0:
+            raise ValueError
+
+        if isinstance(height, bool):
+            raise TypeError
+
+        if not isinstance(height, int):
+            raise TypeError
+
+        if height <= 0:
+            raise ValueError
         self._width = width
         self._height = height
 
