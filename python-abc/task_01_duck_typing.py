@@ -33,7 +33,7 @@ class Circle(Shape):
             radius (int): The radius of the circle
         """
         if radius < 0:
-            radius = 0
+            radius *= -1
         self._radius = radius
 
     def area(self):
