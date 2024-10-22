@@ -32,6 +32,8 @@ class Circle(Shape):
         Args:
             radius (int): The radius of the circle
         """
+        if radius < 0:
+            raise ValueError
         self._radius = radius
 
     def area(self):
@@ -71,7 +73,5 @@ def shape_info(shape):
     Arguments:
         shape (Shape class): shape with the methods area() and perimeter()
     """
-    shape.area()
-    shape.perimeter()
     print("Area: {}".format(shape.area()))
     print("Perimeter: {}".format(shape.perimeter()))
