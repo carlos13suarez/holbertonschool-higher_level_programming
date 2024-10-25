@@ -3,6 +3,7 @@
 This module contains a function to read a text file UTF8
 """
 
+
 def read_file(filename=""):
     """
     Function that reads a text file (UTF8) and prints it to stdout
