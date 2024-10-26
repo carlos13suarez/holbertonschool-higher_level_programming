@@ -36,5 +36,8 @@ class Student:
         The dict key will be the public attribute name and the dict value
         will be the value of the public attribute
         """
-        for elem in self.__dict__:
-            self.__dict__[elem] = json[elem]
+        try:
+            for elem in self.__dict__:
+                self.__dict__[elem] = json[elem]
+        except Exception:
+            return self.__dict__
