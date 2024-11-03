@@ -13,7 +13,10 @@ def home():
 
 @app.route("/data")
 def get_usernames():
-    return jsonify(list(users.keys()))
+    if not users:
+        return jsonify([])
+    usernames = list(users.keys())
+    return jsonify(usernames)
 
 @app.route("/status")
 def check_status():
