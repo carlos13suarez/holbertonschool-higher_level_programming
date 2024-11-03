@@ -20,7 +20,7 @@ def check_status():
     return "OK"
 
 @app.route("/users/<username>")
-def show_user(username):
+def get_user(username):
     user = users.get(username)
     if user:
         return jsonify(user)
@@ -50,4 +50,4 @@ def add_user():
     }), 201
 
 if __name__ == "__main__":
-    app.run()
+    app.run(port=5000)
