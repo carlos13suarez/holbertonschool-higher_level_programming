@@ -1,11 +1,8 @@
 from flask import Flask, jsonify, request
-from markupsafe import escape
 
 app = Flask(__name__)
-users = {
-    "jane": {"username": "jane", "name": "Jane", "age": 28, "city": "Los Angeles"},
-    "john": {"username": "john", "name": "John", "age": 30, "city": "New York"}
-}
+
+users = {}
 
 @app.route("/")
 def home():
@@ -19,7 +16,7 @@ def get_usernames():
     return jsonify(usernames)
 
 @app.route("/status")
-def check_status():
+def status():
     return "OK"
 
 @app.route("/users/<username>")
@@ -39,7 +36,6 @@ def add_user():
     username = data["username"]
     if username in users:
         return jsonify({"error": "User already exists"}), 400
-
     users[username] = {
         "username": username,
         "name": data.get("name", ""),
