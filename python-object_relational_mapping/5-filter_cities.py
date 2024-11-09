@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 """
-Lists all cities of a state from the database hbtn_0e_4_usa in ascending order by cities.id.
+Lists all cities of a state from the database hbtn_0e_4_usa in ascending order
+by cities.id.
 
 Usage:
-    ./5-filter_cities.py <mysql_username> <mysql_password> <database_name> <state_name>
+    ./5-filter_cities.py <mysql_username> <mysql_password> <database_name>
+    <state_name>
 
 Arguments:
     mysql_username: MySQL username
@@ -13,8 +15,8 @@ Arguments:
 
 Description:
     This script connects to a MySQL server running on localhost at port 3306,
-    executes a query to retrieve all cities of a given state ordered by `cities.id`,
-    and prints the result as a comma-separated list of city names.
+    executes a query to retrieve all cities of a given state ordered by
+    `cities.id`, and prints the result as a comma-separated list of city names.
 """
 
 import MySQLdb
