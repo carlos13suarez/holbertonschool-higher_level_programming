@@ -9,13 +9,15 @@ from sqlalchemy import Column, Integer, String
 
 Base = declarative_base()
 
+
 class State(Base):
     """
     State class that links to the 'states' table in a MySQL database.
 
     Attributes:
         id (int): The state's unique identifier, primary key, cannot be null.
-        name (str): The state's name, cannot be null, max length 128 characters.
+        name (str): The state's name, cannot be null, max length 128
+        characters.
     """
     __tablename__ = 'states'
 
