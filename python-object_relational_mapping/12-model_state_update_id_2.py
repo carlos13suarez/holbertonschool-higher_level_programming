@@ -37,7 +37,7 @@ if __name__ == "__main__":
         .filter(State.id == 2)
         .first()
     )
-    state.name='New Mexico'
+    state.name = 'New Mexico'
     session.commit()
 
     session.close()
