@@ -13,7 +13,8 @@ Arguments:
 
 Description:
     This script connects to a MySQL server running on localhost at port 3306,
-    adds a new State object with the name “Louisiana”, and prints the new State id.
+    adds a new State object with the name “Louisiana”, and prints the new
+    State id.
 """
 
 import sys
