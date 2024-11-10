@@ -4,7 +4,8 @@ Lists all State objects from the database hbtn_0e_0_usa
 in ascending order by id
 
 Usage:
-    ./7-model_state_fetch_all.py <mysql_username> <mysql_password> <database_name>
+    ./7-model_state_fetch_all.py <mysql_username> <mysql_password>
+    <database_name>
 
 Arguments:
     mysql_username: MySQL username
@@ -26,8 +27,8 @@ from sqlalchemy.orm import sessionmaker
 if __name__ == "__main__":
 
     engine = create_engine(
-        'mysql+mysqldb://{}:{}@localhost:3306/{}'.\
-        format(sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True
+        'mysql+mysqldb://{}:{}@localhost:3306/{}'
+        .format(sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True
     )
     Session = sessionmaker(bind=engine)
     session = Session()
